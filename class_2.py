@@ -75,4 +75,6 @@ def run(prompt: str):
   
 
 #run("What is the weather in Bangalore?")
-run("Book a flight from Bangalore to Mumbai on 12/01/2026")
+# run("Book a flight from Bangalore to Mumbai on 12/01/2026")
+# run("who is the prime minister of india?")
+run("What is the weather in Mysore?")
