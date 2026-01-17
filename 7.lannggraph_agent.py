@@ -50,6 +50,7 @@ workflow.add_node("tools", ToolNode(tools))
 workflow.set_entry_point("agent")
 workflow.add_conditional_edges("agent", should_continue, {"continue": "tools", "end": END})
 workflow.add_edge("tools", "agent")
+# should_continue is not a node, it is a function that is used to determine the next node to execute
 
 # Compile
 app = workflow.compile()
@@ -66,6 +67,9 @@ for msg in result["messages"]:
     if hasattr(msg, 'content'):
         print(f"{msg.type}: {msg.content}")
 # create a ticket for the issue
+print("*************************************************")
+print("Result: ", result)
+print("*************************************************")
 
 result = app.invoke({
     "messages": [HumanMessage(content="Create a ticket for the issue: The order is not delivered on time")],
@@ -77,3 +81,6 @@ print("\n" + "="*50)
 for msg in result["messages"]:
     if hasattr(msg, 'content'):
         print(f"{msg.type}: {msg.content}")
+print("*************************************************")
+print("Result: ", result)
+print("*************************************************")
