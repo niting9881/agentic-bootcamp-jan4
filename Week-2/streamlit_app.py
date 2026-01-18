@@ -2,6 +2,8 @@
 Streamlit Frontend for Learning Production LLM Patterns
 Interactive educational interface for understanding production-ready agent patterns.
 """
+# streamlit run streamlit_app.py
+# ensure to set the OPENAI_API_KEY in the .streamlit/secrets.toml file
 
 import streamlit as st
 import os
