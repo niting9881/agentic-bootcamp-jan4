@@ -14,7 +14,8 @@ class TicketRouting(BaseModel):
     reasoning: str = Field(
         description="The reasoning for the routing decision"
     )
-    confidence: float = Field(description="The confidence in the routing decision", ge=0.0, le=1.0)
+    confidence: float = Field(description="The confidence in the routing decision", 
+    ge=0.0, le=1.0)
 
 class SupportResponse(BaseModel):
     """Structured response from the customer support agent."""
